@@ -1,0 +1,417 @@
+<html>
+
+  <body>
+
+      <script>
+      var excitedE;
+      var excitedM;
+      var excitedH;
+
+      yesE();
+      mehE();
+      noE();
+      yesM();
+      mehM();
+      noM();
+      yesH();
+      mehH();
+      noH();
+
+      function yesE() {
+        excitedE = 3;
+      }
+
+      function mehE() {
+        excitedE = 2;
+      }
+
+      function noE() {
+        excitedE = 1;
+      }
+
+      function yesM {
+
+        excitedM = 3;
+      }
+
+      function mehM() {
+        excitedM = 2;
+      }
+
+      function noM() {
+        excitedM = 1;
+      }
+
+      function yesH {
+        excitedH = 3;
+      }
+
+      function mehH() {
+        excitedH = 2;
+      }
+
+      function noH() {
+        excitedH = 1;
+      }
+
+    </script>
+
+    <h1>
+      Day Homework Plan
+    </h1>
+
+    <div id=ED1>
+      <script>
+        function ExcitedE() {
+
+
+          if (excitedE = 3 && FirstE2 = 3) {
+            FirstE = "do your # easy assignments last";
+
+          } else if (excitedE = 3 && FirstE2 = 3 && easy >= 4) {
+            ThirdE = "do your # easy  assignments third";
+          }
+          //easy: 1st of list & yes excited
+
+
+          if (excitedE = 3 && SecondE2 = 3) {
+            SecondE = "do your # easy assignments second";
+          }
+          //easy: 2nd of list & yes excited
+          else if (excitedE = 2 && SecondE2 = 3) {
+            SecondE = "do your # easy assignments second";
+          }
+
+          //easy: 2nd of list and maybe excited
+          else if (excitedE = 1 && SecondE2 = 3) {
+            FirstE = "do your # easy assignments first";
+          }
+          //easy: 2nd and no
+
+          if (excitedE = 3 && ThirdE2 = 3) {
+            ThirdE = "do your # easy assignments third";
+          }
+
+          //easy: 3rd of list & yes excited
+          else if (excitedE = 2 && ThirdE2 = 3) {
+            SecondE = "do your # easy assignments second";
+          }
+
+          //easy: 3nd of list and maybe excited
+          else if (excitedE = 3 && Third2 = 3) {
+            FirstE = "do your # easy assignments first";
+          }
+          //easy: 3rd and no
+        }
+
+        var FirstE;
+        var SecondE;
+        var ThirdE;
+        var MediumE;
+        var FirstE2;
+        var MediumE2;
+        var ThirdE2;
+        var Second;
+        var Second2;
+        var Third;
+        var Third2;
+
+        timeE();
+        ExctiedE();
+
+
+        function timeE() {
+          if (easy === 3) {
+
+            Second = "do your # easy assignments second"
+            Second2 = 3;
+          } else if (easy <= 2) {
+            Third = "Do your # easy assignemnts last ";
+            Third2 = 3
+          }
+
+        }
+
+        function showMedium() {
+          document.getElementById("ED1").style.display = "none";
+          document.getElementById("MD1").style.display = "block";
+        }
+
+      </script>
+
+      <h1>
+        How many easy assignments do you have this week?
+      </h1>
+
+      <input min="0" id="easy" type="text">
+
+      <p>Are you excited to do the easy assignments?</p>
+      <button onclick="yesE()">😄Yes</button>
+      <button onclick="mehE()">😐Meh</button>
+      <button onclick="noE()">😕No</button>
+
+      <h1> </h1>
+
+      <button onclick="timeE(); ExcitedE(); showMedium();" id="easyEnter">Enter</button>
+    </div>
+
+
+
+
+    <div id="toMuch" style="display:none">
+      <h1>
+        Woah! I think that's to much homework for one day! Instead, maybe you should use our weekend planner?
+        <button>Take me to the week planner</button>
+        <button>Continue</button>
+        <button>Redo homework plan</button>
+      </h1>
+    </div>
+
+
+
+
+    <div id="MD1" style="display:none">
+
+      <script>
+        var FirstM;
+        var MediumM;
+        var ThirdM;
+        var FirstM2;
+        var MediumM2;
+        var ThirdM2;
+
+        ExcitedM();
+
+        function timeM() {
+          if (medium >= 3) {
+            First = "do your # medium assignments first";
+            First2 = 2;
+          } else if (medium === 2) {
+            Second = "do your # medium assignments second"
+            Second2 = 2;
+          } else if (medium === 1) {
+            Third = "Do your # medium assignments last"
+            Third2 = 2;
+          }
+        }
+
+        function ExcitedM() {
+
+          if (excitedM = 3 && FirstM2 = 3 && medium >= 2) {
+            ThirdM = "do your # easy  assignments third";
+          } else if (excitedM = 3 && FirstM2 = 3) {
+            FirstM = "do your # easy assignments last";
+          }
+          //medium: 1st of list & yes excited
+
+
+          if (excitedM = 3 && SecondM2 = 3) {
+            SecondM = "do your # easy assignments second";
+          }
+          //medium: 2nd of list & yes excited
+          else if (excitedM = 2 && SecondM2 = 3) {
+            SecondM = "do your # easy assignments second";
+          }
+
+          //medium: 2nd of list and maybe excited
+          else if (excitedM = 1 && SecondM2 = 3) {
+            FirstM = "do your # easy assignments first";
+          }
+          //medium: 2nd and no
+
+          if (excitedM = 3 && ThirdM2 = 3) {
+            ThirdM = "do your # easy assignments third";
+          }
+
+          //medium: 3rd of list & yes excited
+          else if (excitedM = 2 && ThirdM2 = 3) {
+            SecondM = "do your # easy assignments second";
+          }
+
+          //medium: 3nd of list and maybe excited
+          else if (excitedM = 3 && ThirdM2 = 3) {
+            FirstM = "do your # easy assignments first";
+          }
+          //medium: 3rd and no
+
+        } else {
+
+          return;
+        }
+
+
+        function showHard() {
+          document.getElementById("MD1").style.display = "none";
+          document.getElementById("HD1").style.display = "block";
+        }
+
+      </script>
+
+      <h1>
+        How many medium assignments do you have this week?
+      </h1>
+
+      <input min="0" id="medium" type="text">
+
+      <p>Are you excited to do the medium assignments?</p>
+      <button onclick="yesM()">Yes</button>
+      <button onclick="mehM()">Meh</button>
+      <button onclick="noM()">No</button>
+
+      <h1> </h1>
+
+      <button onclick="timeM(); ExcitedM(); showHard();" id="mediumEnter">Enter</button>
+    </div>
+
+
+
+
+
+    <div id="HD1" style="display:none">
+
+
+
+      <h1>
+        How many hard assignments do you have this week?
+      </h1>
+
+      <script>
+        var FirstH;
+        var SecondH;
+        var ThirdH2;
+        var MediumH;
+        var ThirdH;
+        var FirstH2;
+        var MediumH2;
+        var First;
+        var First2;
+        var Second;
+        var Second2;
+
+        ExcitedH();
+        timeH();
+
+        function timeH() {
+          if (hard >= 1) {
+            First = "do your # hard assignments first";
+            First2 = 1;
+          } else {
+            return;
+          } else if (hard >= 1) {
+            Second = "do your # hard assignment(s) second"
+            Second2 = 1;
+          } else {
+            return;
+          }
+        }
+        }
+
+
+        function ExcitedH() {
+
+          if (excitedE = 3 && FirstH2 = 3 && hard === 1) {
+            ThirdH = "do your # hard  assignments last";
+          } else if (excitedE = 3 && FirstH2 = 3) {
+            FirstH = "do your # hard assignments first";
+          }
+          //hard: 1st of list & yes excited
+
+
+          if (excitedE = 3 && SecondH2 = 3) {
+            SecondH = "do your # hard assignments second";
+          }
+          //hard: 2nd of list & yes excited
+          else if (excitedE = 2 && SecondH2 = 3) {
+            SecondH = "do your # hard assignments second";
+          }
+
+          //hard: 2nd of list and maybe excited
+          else if (excitedE = 1 && SecondH2 = 3) {
+            FirstH = "do your # hard assignments first";
+          }
+          //hard: 2nd and no
+
+          if (excitedE = 3 && ThirdH2 = 3) {
+            ThirdH = "do your # hard assignments third";
+          }
+
+          //hard: 3rd of list & yes excited
+          else if (excitedE = 2 && ThirdH2 = 3) {
+            SecondH = "do your # hard assignments second";
+          }
+
+          //hard: 3nd of list and maybe excited
+          else if (excitedE = 3 && ThirdH2 = 3) {
+            FirstH = "do your # hard assignments first";
+          }
+          //hard: 3rd and no
+
+        } else {
+
+          return;
+        }
+
+
+        function showSchedule() {
+          document.getElementById("MD1").style.display = "none";
+          document.getElementById("homeworkSchedule").style.display = "block";
+        }
+
+      </script>
+
+      <input min="0" id="hard" type="text">
+
+      <p>Are you excited to do the hard assignments?</p>
+      <button onclick="yesH()">😄Yes</button>
+      <button onclick="mehH()">😐Meh</button>
+      <button onclick="noH()">😕No</button>
+
+      <h1> </h1>
+
+      <button onclick="timeH(); ExcitedH(); makeHomeworkSchedule(); showSchedule();"> enter </button>
+
+    </div>
+
+    <script>
+      var FirstE;
+      var FirstM;
+      var FirstH;
+      var SecondE;
+      var SecondM;
+      var SecondH;
+      var ThirdE;
+      var ThirdM;
+      var ThirdH;
+
+      makeHomeworkSchedule();
+
+
+      function makeHomeworkSchedule() {
+
+        document.getElementById("first").innerHTML = FirstE + " " + FirstM + " " + FirstH;
+        document.getElementById("second").innerHTML = SecondE + " " + SecondM + " " + SecondH;
+        document.getElementById("third").innerHTML = ThirdE + " " + ThirdM + " "
+        ThirdH;
+      }
+
+    </script>
+
+
+
+    <div id="homeworkSchedule" style="display:none">
+      <h1>Your Homework Schedule has Arrived!</h1>
+      <p> ### video ### Here is your personal homework schedule for today! The schdule below is just a recomendation so feel free to move the assignments around and do them in any order you please! Tip: its a good idea to do assignments you don't like and or will take a lot of time, first!</p>
+
+      <h1>Do 1st:</h1>
+      <h5 id="first"></h5>
+      <h1>Do 2nd:</h1>
+      <h5 id="second"></h5>
+      <h1>Do 3rd:</h1>
+      <h5 id="third"></h5>
+
+    </div>
+
+
+  </body>
+
+</html>
