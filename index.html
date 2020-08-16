@@ -1,7 +1,7 @@
 <html>
 <style>
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #3366ff; /* Dark blue */
   border: none;
   color: white;
   padding: 20px;
@@ -18,6 +18,8 @@
 
 
 body {
+    background-color: #cceeff;
+    color: #3366ff;
     font-family: 'Helvetica'; font-size: 22px;
 }
 </style>
@@ -154,10 +156,7 @@ body {
 
         }
 
-        function showMedium() {
-          document.getElementById("ED1").style.display = "none";
-          document.getElementById("MD1").style.display = "block";
-        }
+
 
       </script>
 
@@ -174,7 +173,14 @@ body {
 
       <h1> </h1>
 
-      <button class="button button3" onclick="timeE(); ExcitedE(); showMedium();" id="easyEnter">Enter</button>
+      <script>
+      function showMedium() {
+        document.getElementById("ED1").style.display = "none";
+        document.getElementById("MD1").style.display = "block";
+      }
+      </script>
+
+      <button class="button button3" onclick="showMedium(); timeE(); ExcitedE();" id="easyEnter">Enter</button>
     </div>
 
 
@@ -182,7 +188,7 @@ body {
 
     <div id="toMuch" style="display:none">
       <h1>
-        Woah! I think that's to much homework for one day! Instead, maybe you should use our weekend planner?
+        Woah! I think that's to much homework for one day!
         <button>Take me to the week planner</button>
         <button>Continue</button>
         <button>Redo homework plan</button>
@@ -282,7 +288,14 @@ body {
 
       <h1> </h1>
 
-      <button class="button button3" onclick="timeM(); ExcitedM(); showHard();" id="mediumEnter">Enter</button>
+      <script>
+      function showHard() {
+        document.getElementById("MD1").style.display = "none";
+        document.getElementById("HD1").style.display = "block";
+      }
+      </script>
+
+      <button class="button button3" onclick="showHard(); timeM(); ExcitedM();" id="mediumEnter">Enter</button>
     </div>
 
 
@@ -373,12 +386,6 @@ body {
           return;
         }
 
-
-        function showSchedule() {
-          document.getElementById("MD1").style.display = "none";
-          document.getElementById("homeworkSchedule").style.display = "block";
-        }
-
       </script>
 
       <input min="0" id="hard" type="text">
@@ -390,38 +397,49 @@ body {
 
       <h1> </h1>
 
-      <button class="button button3" onclick="timeH(); ExcitedH(); makeHomeworkSchedule(); showSchedule();"> enter </button>
+      <script>
+      function showSchedule() {
+        document.getElementById("HD1").style.display = "none";
+        document.getElementById("homeworkSchedule").style.display = "block";
+      }
+      function showEnterBtn(){
+        document.getElementById("save").style.display = "none";
+        document.getElementById("enter").style.display = "block";
+      }
+
+        var FirstE;
+        var FirstM;
+        var FirstH;
+        var SecondE;
+        var SecondM;
+        var SecondH;
+        var ThirdE;
+        var ThirdM;
+        var ThirdH;
+
+        makeHomeworkSchedule();
+
+
+        function makeHomeworkSchedule() {
+
+          document.getElementById("first").innerHTML = FirstE + " " + FirstM + " " + FirstH;
+          document.getElementById("second").innerHTML = SecondE + " " + SecondM + " " + SecondH;
+          document.getElementById("third").innerHTML = ThirdE + " " + ThirdM + " "
+          ThirdH;
+        }
+
+      </script>
+
+      <button id="save" class ="button button3" onclick="showEnterBtn(); timeH(); ExcitedH(); makeHomeworkSchedule();">Save</button>
+
+      <button id="enter" style="display:none"class="button button3" onclick= "showSchedule()"> enter </button>
 
     </div>
 
-    <script>
-      var FirstE;
-      var FirstM;
-      var FirstH;
-      var SecondE;
-      var SecondM;
-      var SecondH;
-      var ThirdE;
-      var ThirdM;
-      var ThirdH;
-
-      makeHomeworkSchedule();
-
-
-      function makeHomeworkSchedule() {
-
-        document.getElementById("first").innerHTML = FirstE + " " + FirstM + " " + FirstH;
-        document.getElementById("second").innerHTML = SecondE + " " + SecondM + " " + SecondH;
-        document.getElementById("third").innerHTML = ThirdE + " " + ThirdM + " "
-        ThirdH;
-      }
-
-    </script>
 
 
 
     <div id="homeworkSchedule" style="display:none">
-      <h1>Your Homework Schedule has Arrived!</h1>
       <p> ### video ### Here is your personal homework schedule for today! The schdule below is just a recomendation so feel free to move the assignments around and do them in any order you please! Tip: its a good idea to do assignments you don't like and or will take a lot of time, first!</p>
 
       <h1>Do 1st:</h1>
