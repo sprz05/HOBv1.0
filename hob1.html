@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HOB</title>
+
+    <style>
+      input[type=checkbox]:checked + label.strikethrough{
+        text-decoration: line-through;}
+    </style>
+
+  </head>
+  <body style="font-family: 'Roboto', sans-serif;">
+
+
+
+<!--Start of Form-->
+
+<div id="easyAssignments">
+    <p>What easy assignments do you have to do today?</p>
+    <input type="text" id="easyA1">
+
+
+    <button class="w3-button w3-red" onclick="displayM();">Enter</button>
+
+</div>
+
+
+<div id="mediumAssignments" style="display:none">
+    <p>What medium (not too hard, not to easy) assignments do you have to do?</p>
+    <input type="text" id="mediumA1">
+
+    <button class="w3-button w3-red" onclick="displayH();">Enter</button>
+
+</div>
+
+
+<div id="hardAssignments" style="display:none">
+  <p>What hard assignments do you have to do?</p>
+  <input type="text" id="hardA1">
+
+  <button class="w3-button w3-red" onclick="makeToDoList(); displayTDL();">Enter</button>
+
+</div>
+
+
+
+<!--End of Form-->
+
+
+
+<!--Start of To-do List-->
+
+<div id=toDoList style="display:none">
+  <h1>To Do List</h1>
+
+  <input type="checkbox" id="toDo1" name="toDo1" value="toDo1"/>
+  <label class="strikethrough" for="toDo1"><span id="result1"></span></label><br>
+
+  <input type="checkbox" id="toDo4" name="toDo4" value="toDo4"/>
+  <label class="strikethrough" for="toDo4"><span id="result4"></span></label><br>
+
+  <input type="checkbox" id="toDo7" name="toDo7" value="toDo7"/>
+  <label class="strikethrough" for="toDo7"><span id="result7"></span></label><br>
+
+</div>
+
+
+
+
+
+<script>
+function displayM(){
+  document.getElementById("easyAssignments").style.display = "none";
+  document.getElementById("mediumAssignments").style.display = "block";
+}
+
+function displayH(){
+  document.getElementById("mediumAssignments").style.display = "none";
+  document.getElementById("hardAssignments").style.display = "block";
+}
+
+function displayTDL(){
+  document.getElementById("hardAssignments").style.display = "none";
+  document.getElementById("toDoList").style.display = "block";
+}
+
+function makeToDoList(){
+ document.getElementById("result1").innerHTML = document.getElementById('easyA1').value;
+
+ document.getElementById("result4").innerHTML = document.getElementById('mediumA1').value;
+ document.getElementById("result7").innerHTML = document.getElementById('hardA1').value;
+
+}
+</script>
+
+<!--End of To-do List-->
+
+
+
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HOB</title>
+
+    <style>
+      input[type=checkbox]:checked + label.strikethrough{
+        text-decoration: line-through;}
+    </style>
+
+  </head>
+  <body style="font-family: 'Roboto', sans-serif;">
+
+
+
+<!--Start of Form-->
+
+<div id="easyAssignments">
+    <p>What easy assignments do you have to do today?</p>
+    <input type="text" id="easyA1">
+    <input type="text" id="easyA2">
+    <input type="text" id="easyA3">
+    <input type="text" id="easyA4">
+
+    <button onclick="displayM();">Enter</button>
+
+</div>
+
+
+<div id="mediumAssignments" style="display:none">
+    <p>What medium (not too hard, not to easy)assignments do you have to do today?</p>
+    <input type="text" id="mediumA1">
+    <input type="text" id="mediumA2">
+    <input type="text" id="mediumA3">
+    <input type="text" id="mediumA4">
+    <button onclick="displayH();">Enter</button>
+
+</div>
+
+
+<div id="hardAssignments" style="display:none">
+  <p>What hard assignments do you have to do today?</p>
+  <input type="text" id="hardA1">
+  <input type="text" id="hardA2">
+  <input type="text" id="hardA3">
+  <input type="text" id="hardA4">
+
+
+  <button onclick="makeToDoList(); displayTDL();">Enter</button>
+
+</div>
+
+
+
+<!--End of Form-->
+
+
+
+<!--Start of To-do List-->
+
+<div id=toDoList style="display:none">
+  <h1>To Do List</h1>
+
+  <input type="checkbox" id="toDo1" name="toDo1" value="toDo1"/>
+  <label class="strikethrough" for="toDo1"><span id="result1"></span></label><br>
+
+  <input type="checkbox" id="toDo2" name="toDo2" value="toDo2"/>
+  <label class="strikethrough" for="toDo2"><span id="result2"></span></label><br>
+
+  <input type="checkbox" id="toDo3" name="toDo3" value="toDo3"/>
+  <label class="strikethrough" for="toDo3"><span id="result3"></span></label><br>
+
+  <input type="checkbox" id="toDo4A" name="toDo4A" value="toDo4A"/>
+  <label class="strikethrough" for="toDo4A"><span id="result4A"></span></label><br>
+
+
+  <input type="checkbox" id="toDo4" name="toDo4" value="toDo4"/>
+  <label class="strikethrough" for="toDo4"><span id="result4"></span></label><br>
+
+  <input type="checkbox" id="toDo5" name="toDo5" value="toDo5"/>
+  <label class="strikethrough" for="toDo5"><span id="result5"></span></label><br>
+
+  <input type="checkbox" id="toDo6" name="toDo6" value="toDo6"/>
+  <label class="strikethrough" for="toDo6"><span id="result6"></span></label><br>
+
+  <input type="checkbox" id="toDo4B" name="toDo4B" value="toDo4B"/>
+  <label class="strikethrough" for="toDo4B"><span id="result4B"></span></label><br>
+
+
+  <input type="checkbox" id="toDo7" name="toDo7" value="toDo7"/>
+  <label class="strikethrough" for="toDo7"><span id="result7"></span></label><br>
+
+  <input type="checkbox" id="toDo8" name="toDo8" value="toDo8"/>
+  <label class="strikethrough" for="toDo8"><span id="result8"></span></label><br>
+
+  <input type="checkbox" id="toDo9" name="toDo9" value="toDo9"/>
+  <label class="strikethrough" for="toDo9"><span id="result9"></span></label><br>
+
+  <input type="checkbox" id="toDo4C" name="toDo4C" value="toDo4C"/>
+  <label class="strikethrough" for="toDo4C"><span id="result4C"></span></label><br>
+</div>
+
+
+
+
+
+<script>
+function displayM(){
+  document.getElementById("easyAssignments").style.display = "none";
+  document.getElementById("mediumAssignments").style.display = "block";
+}
+
+function displayH(){
+  document.getElementById("mediumAssignments").style.display = "none";
+  document.getElementById("hardAssignments").style.display = "block";
+}
+
+function displayTDL(){
+  document.getElementById("hardAssignments").style.display = "none";
+  document.getElementById("toDoList").style.display = "block";
+}
+
+function makeToDoList(){
+ document.getElementById("result1").innerHTML = document.getElementById('easyA1').value;
+ document.getElementById("result2").innerHTML = document.getElementById('easyA2').value;
+ document.getElementById("result3").innerHTML = document.getElementById('easyA3').value;
+ document.getElementById("result4A").innerHTML = document.getElementById('easyA4').value;
+
+ document.getElementById("result4").innerHTML = document.getElementById('mediumA1').value;
+ document.getElementById("result5").innerHTML = document.getElementById('mediumA2').value;
+ document.getElementById("result6").innerHTML = document.getElementById('mediumA3').value;
+ document.getElementById("result4B").innerHTML = document.getElementById('mediumA4').value;
+
+ document.getElementById("result7").innerHTML = document.getElementById('hardA1').value;
+ document.getElementById("result8").innerHTML = document.getElementById('hardA2').value;
+ document.getElementById("result9").innerHTML = document.getElementById('hardA3').value;
+ document.getElementById("result4C").innerHTML = document.getElementById('hardA4').value;
+
+}
+</script>
+
+<!--End of To-do List-->
+
+
+
+  </body>
+</html>
