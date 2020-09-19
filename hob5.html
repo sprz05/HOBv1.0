@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <head>
     <meta charset="utf-8">
     <title>HOB</title>
@@ -15,42 +17,58 @@
 
 
 <!--Start of Form-->
+<center>
+  <div id="easyAssignments">
+    <p>How many easy assignments do you have to do today?</p>
+    <input min="0" max="5" type="number" id="numEAI">
+    <button class="w3-button w3-indigo" onclick="showInputE()">Enter</button>
 
-<div id="easyAssignments">
-    <p>What easy assignments do you have to do today?</p>
-    <input type="text" id="easyA1">
-    <input type="text" id="easyA2">
-    <input type="text" id="easyA3">
-    <input type="text" id="easyA4">
 
-    <button onclick="displayM();">Enter</button>
+      <p>What easy assignments do you have to do today?</p>
+        <input style="display:none" type="text" id="easyA1">
+        <input style="display:none" type="text" id="easyA2">
+        <input style="display:none" type="text" id="easyA3">
+        <input style="display:none" type="text" id="easyA4">
+        <input style="display:none" type="text" id="easyA5">
 
-</div>
+      <button class="w3-button w3-indigo" onclick="displayM();">Save</button>
+  </div>
 
 
 <div id="mediumAssignments" style="display:none">
-    <p>What medium (not too hard, not to easy)assignments do you have to do today?</p>
-    <input type="text" id="mediumA1">
-    <input type="text" id="mediumA2">
-    <input type="text" id="mediumA3">
-    <input type="text" id="mediumA4">
-    <button onclick="displayH();">Enter</button>
+  <p>How many medium assignments do you have to do today?</p>
+  <input min="0" max="5" type="number" id="numMAI">
+  <button class="w3-button w3-indigo" onclick="showInputM()">Enter</button>
+
+    <p>What medium (not too hard, not to easy) assignments do you have to do?</p>
+    <input style="display:none" type="text" id="mediumA1">
+    <input style="display:none" type="text" id="mediumA2">
+    <input style="display:none" tsype="text" id="mediumA3">
+    <input style="display:none" type="text" id="mediumA4">
+    <input style="display:none" type="text" id="mediumA5">
+
+    <button class="w3-button w3-indigo" onclick="displayH();">Enter</button>
 
 </div>
 
 
 <div id="hardAssignments" style="display:none">
-  <p>What hard assignments do you have to do today?</p>
-  <input type="text" id="hardA1">
-  <input type="text" id="hardA2">
-  <input type="text" id="hardA3">
-  <input type="text" id="hardA4">
+  <p>How many hard assignments do you have to do today?</p>
+  <input min="0" max="5" type="number" id="numHAI">
+  <button class="w3-button w3-indigo" onclick="showInputH()">Enter</button>
 
+  <p>What hard assignments do you have to do?</p>
+    <input style="display:none" type="text" id="hardA1">
+    <input style="display:none" type="text" id="hardA2">
+    <input style="display:none" type="text"id="hardA3">
+    <input style="display:none" type="text" id="hardA4">
+    <input style="display:none" type="text" id="hardA5">
 
-  <button onclick="makeToDoList(); displayTDL();">Enter</button>
+  <button class="w3-button w3-indigo" onclick="makeToDoList(); displayTDL();">Enter</button>
 
 </div>
 
+<center>
 
 
 <!--End of Form-->
@@ -60,8 +78,9 @@
 <!--Start of To-do List-->
 
 <div id=toDoList style="display:none">
-  <h1>To Do List</h1>
+  <h1>Homework Blocks for Today:</h1>
 
+<h3>Easy Block</h3>
   <input type="checkbox" id="toDo1" name="toDo1" value="toDo1"/>
   <label class="strikethrough" for="toDo1"><span id="result1"></span></label><br>
 
@@ -71,41 +90,283 @@
   <input type="checkbox" id="toDo3" name="toDo3" value="toDo3"/>
   <label class="strikethrough" for="toDo3"><span id="result3"></span></label><br>
 
-  <input type="checkbox" id="toDo4A" name="toDo4A" value="toDo4A"/>
-  <label class="strikethrough" for="toDo4A"><span id="result4A"></span></label><br>
-
-
   <input type="checkbox" id="toDo4" name="toDo4" value="toDo4"/>
   <label class="strikethrough" for="toDo4"><span id="result4"></span></label><br>
 
   <input type="checkbox" id="toDo5" name="toDo5" value="toDo5"/>
-  <label class="strikethrough" for="toDo5"><span id="result5"></span></label><br>
-
-  <input type="checkbox" id="toDo6" name="toDo6" value="toDo6"/>
-  <label class="strikethrough" for="toDo6"><span id="result6"></span></label><br>
-
-  <input type="checkbox" id="toDo4B" name="toDo4B" value="toDo4B"/>
-  <label class="strikethrough" for="toDo4B"><span id="result4B"></span></label><br>
+  <label class="strikethrough" for="toDo1"><span id="result5"></span></label><br>
 
 
-  <input type="checkbox" id="toDo7" name="toDo7" value="toDo7"/>
-  <label class="strikethrough" for="toDo7"><span id="result7"></span></label><br>
 
-  <input type="checkbox" id="toDo8" name="toDo8" value="toDo8"/>
-  <label class="strikethrough" for="toDo8"><span id="result8"></span></label><br>
+<h3>Medium Block</h3>
 
-  <input type="checkbox" id="toDo9" name="toDo9" value="toDo9"/>
-  <label class="strikethrough" for="toDo9"><span id="result9"></span></label><br>
+  <input type="checkbox" id="toDo1M" name="toDo1M" value="toDo1M"/>
+  <label class="strikethrough" for="toDo1M"><span id="result1M"></span></label><br>
 
-  <input type="checkbox" id="toDo4C" name="toDo4C" value="toDo4C"/>
-  <label class="strikethrough" for="toDo4C"><span id="result4C"></span></label><br>
+  <input type="checkbox" id="toDo2M" name="toDo2M" value="toDo2M"/>
+  <label class="strikethrough" for="toDo2M"><span id="result2M"></span></label><br>
+
+  <input type="checkbox" id="toDo3M" name="toDo3M" value="toDo3M"/>
+  <label class="strikethrough" for="toDo3M"><span id="result3M"></span></label><br>
+
+  <input type="checkbox" id="toDo4M" name="toDo4M" value="toDo4M"/>
+  <label class="strikethrough" for="toDo4M"><span id="result4M"></span></label><br>
+
+  <input type="checkbox" id="toDo5M" name="toDo5M" value="toDo5M"/>
+  <label class="strikethrough" for="toDo1M"><span id="result5M"></span></label><br>
+
+
+<h3>Hard Block</h3>
+  <input type="checkbox" id="toDo1H" name="toDo1H" value="toDo1H"/>
+  <label class="strikethrough" for="toDo1H"><span id="result1H"></span></label><br>
+
+  <input type="checkbox" id="toDo2H" name="toDo2H" value="toDo2H"/>
+  <label class="strikethrough" for="toDo2H"><span id="result2H"></span></label><br>
+
+  <input type="checkbox" id="toDo3H" name="toDo3H" value="toDo3H"/>
+  <label class="strikethrough" for="toDo3H"><span id="result3H"></span></label><br>
+
+  <input type="checkbox" id="toDo4H" name="toDo4H" value="toDo4H"/>
+  <label class="strikethrough" for="toDo4H"><span id="result4H"></span></label><br>
+
+  <input type="checkbox" id="toDo5H" name="toDo5H" value="toDo5H"/>
+  <label class="strikethrough" for="toDo1H"><span id="result5H"></span></label><br>
+
+
+</h3>
+
 </div>
+
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
+
 
 
 
 
 
 <script>
+
+  /* START of show input functions */
+
+  function onlyShowInput1(){
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "none";
+      document.getElementById("toDo2").style.display = "none";
+
+      document.getElementById("easyA3").style.display = "none";
+      document.getElementById("toDo3").style.display = "none";
+
+      document.getElementById("easyA4").style.display = "none";
+      document.getElementById("toDo4").style.display = "none";
+
+      document.getElementById("easyA5").style.display = "none";
+      document.getElementById("toDo5").style.display = "none";
+      }
+  function onlyShowInput2(){
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "none";
+      document.getElementById("toDo3").style.display = "none";
+
+      document.getElementById("easyA4").style.display = "none";
+      document.getElementById("toDo4").style.display = "none";
+
+      document.getElementById("easyA5").style.display = "none";
+      document.getElementById("toDo5").style.display = "none";
+      }
+      function onlyShowInput3(){
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "none";
+      document.getElementById("toDo4").style.display = "none";
+      document.getElementById("easyA5").style.display = "none";
+      document.getElementById("toDo5").style.display = "none";
+      }
+      function onlyShowInput4(){
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "none";
+      document.getElementById("toDo5").style.display = "none";
+      }
+      function onlyShowInput5(){
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "block";
+      }
+
+
+  /* START: medium show input functions */
+
+  function onlyShowInput1M(){
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "none";
+      document.getElementById("toDo2M").style.display = "none";
+
+      document.getElementById("mediumA3").style.display = "none";
+      document.getElementById("toDo3M").style.display = "none";
+
+      document.getElementById("mediumA4").style.display = "none";
+      document.getElementById("toDo4M").style.display = "none";
+
+      document.getElementById("mediumA5").style.display = "none";
+      document.getElementById("toDo5M").style.display = "none";
+      }
+  function onlyShowInput2M(){
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "none";
+      document.getElementById("toDo3M").style.display = "none";
+
+      document.getElementById("mediumA4").style.display = "none";
+      document.getElementById("toDo4M").style.display = "none";
+
+      document.getElementById("mediumA5").style.display = "none";
+      document.getElementById("toDo5M").style.display = "none";
+      }
+      function onlyShowInput3M(){
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "none";
+      document.getElementById("toDo4M").style.display = "none";
+
+      document.getElementById("mediumA5").style.display = "none";
+      document.getElementById("toDo5M").style.display = "none";
+      }
+      function onlyShowInput4M(){
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "none";
+      document.getElementById("toDo5M").style.display = "none";
+      }
+      function onlyShowInput5M(){
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "block";
+      }
+
+
+      /* START: hard show input functions */
+
+      function onlyShowInput1H(){
+        document.getElementById("hardA1").style.display = "block";
+        document.getElementById("hardA2").style.display = "none";
+        document.getElementById("toDo2H").style.display = "none";
+
+        document.getElementById("hardA3").style.display = "none";
+        document.getElementById("toDo3H").style.display = "none";
+
+        document.getElementById("hardA4").style.display = "none";
+        document.getElementById("toDo4H").style.display = "none";
+
+        document.getElementById("hardA5").style.display = "none";
+        document.getElementById("toDo5H").style.display = "none";
+          }
+      function onlyShowInput2H(){
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+        document.getElementById("hardA3").style.display = "none";
+        document.getElementById("toDo3H").style.display = "none";
+
+        document.getElementById("hardA4").style.display = "none";
+        document.getElementById("toDo4H").style.display = "none";
+
+        document.getElementById("hardA5").style.display = "none";
+        document.getElementById("toDo5H").style.display = "none";
+          }
+          function onlyShowInput3H(){
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "none";
+        document.getElementById("toDo4H").style.display = "none";
+
+        document.getElementById("hardA5").style.display = "none";
+        document.getElementById("toDo5H").style.display = "none";
+          }
+          function onlyShowInput4H(){
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "none";
+          document.getElementById("toDo5H").style.display = "none";
+          }
+          function onlyShowInput5H(){
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "block";
+          }
+
+/* START: function show input easy*/
+  function showInputE(){
+  var numEAI = document.getElementById('numEAI');
+  	if (numEAI.value == 1){
+      	onlyShowInput1();
+  	} else if (numEAI.value == 2){
+      	onlyShowInput2();
+    } else if (numEAI.value == 3){
+      	onlyShowInput3();
+    } else if (numEAI.value == 4){
+      	onlyShowInput4();
+    } else if (numEAI.value == 5){
+      	onlyShowInput5();
+    } else{
+    	alert ("Try doing between 1-5 easy assignments");
+    }
+
+  }
+  /* START: function show input medium*/
+  function showInputM(){
+  var numMAI = document.getElementById('numMAI');
+    if (numMAI.value == 1){
+        onlyShowInput1M();
+    } else if (numMAI.value == 2){
+        onlyShowInput2M();
+    } else if (numMAI.value == 3){
+        onlyShowInput3M();
+    } else if (numMAI.value == 4){
+        onlyShowInput4M();
+    } else if (numMAI.value == 5){
+        onlyShowInput5M();
+    } else{
+      alert ("Try doing between 1-5 medium assignments");
+    }
+
+  }
+  /* START: function show input hard*/
+  function showInputH(){
+  var numHAI = document.getElementById('numHAI');
+    if (numHAI.value == 1){
+        onlyShowInput1H();
+    } else if (numHAI.value == 2){
+        onlyShowInput2H();
+    } else if (numHAI.value == 3){
+        onlyShowInput3H();
+    } else if (numHAI.value == 4){
+        onlyShowInput4H();
+    } else if (numHAI.value == 5){
+        onlyShowInput5H();
+    } else{
+      alert ("Try doing between 1-5 medium assignments");
+    }
+  }
+
+
+
+/* display functions in form */
 function displayM(){
   document.getElementById("easyAssignments").style.display = "none";
   document.getElementById("mediumAssignments").style.display = "block";
@@ -125,24 +386,25 @@ function makeToDoList(){
  document.getElementById("result1").innerHTML = document.getElementById('easyA1').value;
  document.getElementById("result2").innerHTML = document.getElementById('easyA2').value;
  document.getElementById("result3").innerHTML = document.getElementById('easyA3').value;
- document.getElementById("result4A").innerHTML = document.getElementById('easyA4').value;
+ document.getElementById("result4").innerHTML = document.getElementById('easyA4').value;
+ document.getElementById("result5").innerHTML = document.getElementById('easyA5').value;
 
- document.getElementById("result4").innerHTML = document.getElementById('mediumA1').value;
- document.getElementById("result5").innerHTML = document.getElementById('mediumA2').value;
- document.getElementById("result6").innerHTML = document.getElementById('mediumA3').value;
- document.getElementById("result4B").innerHTML = document.getElementById('mediumA4').value;
+ document.getElementById("result1M").innerHTML = document.getElementById('mediumA1').value;
+ document.getElementById("result2M").innerHTML = document.getElementById('mediumA2').value;
+ document.getElementById("result3M").innerHTML = document.getElementById('mediumA3').value;
+ document.getElementById("result4M").innerHTML = document.getElementById('mediumA4').value;
+ document.getElementById("result5M").innerHTML = document.getElementById('mediumA5').value;
 
- document.getElementById("result7").innerHTML = document.getElementById('hardA1').value;
- document.getElementById("result8").innerHTML = document.getElementById('hardA2').value;
- document.getElementById("result9").innerHTML = document.getElementById('hardA3').value;
- document.getElementById("result4C").innerHTML = document.getElementById('hardA4').value;
-
+ document.getElementById("result1H").innerHTML = document.getElementById('hardA1').value;
+ document.getElementById("result2H").innerHTML = document.getElementById('hardA2').value;
+ document.getElementById("result3H").innerHTML = document.getElementById('hardA3').value;
+ document.getElementById("result4H").innerHTML = document.getElementById('hardA4').value;
+ document.getElementById("result5H").innerHTML = document.getElementById('hardA5').value;
 }
 </script>
 
 <!--End of To-do List-->
 
-
-
-  </body>
+</center>
+</body>
 </html>
