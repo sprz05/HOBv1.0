@@ -11,6 +11,25 @@
         text-decoration: line-through;}
     </style>
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+
+
+
   </head>
   <body style="font-family: 'Roboto', sans-serif;">
 
@@ -21,7 +40,7 @@
   <div id="easyAssignments">
     <p>How many easy assignments do you have to do today?</p>
     <input min="0" max="5" type="number" id="numEAI">
-    <button class="w3-button w3-green" onclick="showInputE()">Enter</button>
+    <button class="btn btn-success" onclick="showInputE()">Enter</button>
 
 
       <p>What easy assignments do you have to do today?</p>
@@ -31,14 +50,14 @@
         <input style="display:none" type="text" id="easyA4">
         <input style="display:none" type="text" id="easyA5">
 
-      <button class="w3-button w3-green" onclick="displayM();">Save</button>
+      <button class="btn btn-success" onclick="displayM();">Save</button>
   </div>
 
 
 <div id="mediumAssignments" style="display:none">
   <p>How many medium assignments do you have to do today?</p>
   <input min="0" max="5" type="number" id="numMAI">
-  <button class="w3-button w3-green" onclick="showInputM()">Enter</button>
+  <button class="btn btn-success" onclick="showInputM()">Enter</button>
 
     <p>What medium (not too hard, not to easy) assignments do you have to do?</p>
     <input style="display:none" type="text" id="mediumA1">
@@ -47,7 +66,7 @@
     <input style="display:none" type="text" id="mediumA4">
     <input style="display:none" type="text" id="mediumA5">
 
-    <button class="w3-button w3-green" onclick="displayH();">Enter</button>
+    <button class="btn btn-success" onclick="displayH();">Enter</button>
 
 </div>
 
@@ -55,7 +74,7 @@
 <div id="hardAssignments" style="display:none">
   <p>How many hard assignments do you have to do today?</p>
   <input min="0" max="5" type="number" id="numHAI">
-  <button class="w3-button w3-green" onclick="showInputH()">Enter</button>
+  <button class="btn btn-success" onclick="showInputH()">Enter</button>
 
   <p>What hard assignments do you have to do?</p>
     <input style="display:none" type="text" id="hardA1">
@@ -64,7 +83,7 @@
     <input style="display:none" type="text" id="hardA4">
     <input style="display:none" type="text" id="hardA5">
 
-  <button class="w3-button w3-green" onclick="makeToDoList(); displayTDL();">Enter</button>
+  <button class="btn btn-success" onclick="makeToDoList(); displayTDL();">Enter</button>
 
 </div>
 
