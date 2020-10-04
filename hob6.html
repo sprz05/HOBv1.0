@@ -6,95 +6,93 @@
     <meta charset="utf-8">
     <title>HOB</title>
 
-    <style>
-      input[type=checkbox]:checked + label.strikethrough{
-        text-decoration: line-through;}
 
-        body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    color: #ffffffff;
-    text-align: center;
-    background: #0c0c2fff;
-    font-weight: 100;
-    padding-top: 50px;
-    padding-right: 80px;
-    padding-bottom: 50px;
-    padding-left: 80px;
-  }
-    </style>
+
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+      <!--     Fonts and icons     -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+      <!-- Nucleo Icons -->
+      <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+      <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+      <!-- Font Awesome Icons -->
+      <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+      <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+      <!-- CSS Files -->
+      <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="general.css" />
+
 
   </head>
   <body style="font-family: 'Roboto', sans-serif;">
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-
-    <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <!-- Nucleo Icons -->
-    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- Font Awesome Icons -->
-    <link href="./assets/css/font-awesome.css" rel="stylesheet" />
-    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- CSS Files -->
-    <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
-
 
 
 <!--Start of Form-->
+
 <center>
   <div id="easyAssignments">
-    <p>How many easy assignments do you have to do today?</p>
-    <input min="0" max="5" type="number" id="numEAI">
-    <button class="btn btn-default" onclick="showInputE()">Enter</button>
+    <p>How many easy assignments do you have to do today? (If you don't have any put 0)</p>
+    <input class="pink" min="0" max="5" type="number" id="numEAI" required>
 
+    <p></p>
+
+    <button class="btn btn-primary" onclick="showInputE();">Enter</button>
 
       <p>What easy assignments do you have to do today?</p>
-        <input style="display:none" type="text" id="easyA1">
-        <input style="display:none" type="text" id="easyA2">
-        <input style="display:none" type="text" id="easyA3">
-        <input style="display:none" type="text" id="easyA4">
-        <input style="display:none" type="text" id="easyA5">
+        <input class="red" style="display:none" type="text" id="easyA1">
+        <input class="yellow" style="display:none" type="text" id="easyA2">
+        <input class="green" style="display:none" type="text" id="easyA3">
+        <input class="blue" style="display:none" type="text" id="easyA4">
+        <input class="purple" style="display:none" type="text" id="easyA5">
 
-      <button class="btn btn-default" onclick="displayM();">Save</button>
+
+      <button style="display:none" id="saveE" class="btn btn-primary" onclick="displayM();">Save</button>
   </div>
 
 
 <div id="mediumAssignments" style="display:none">
-  <p>How many medium assignments do you have to do today?</p>
-  <input min="0" max="5" type="number" id="numMAI">
-  <button class="btn btn-default" onclick="showInputM()">Enter</button>
+  <p>How many medium assignments do you have to do today? (If you don't have any put 0)</p>
+  <input class="pink" min="0" max="5" type="number" id="numMAI">
+
+  <p></p>
+
+  <button class="btn btn-primary" onclick="showInputM();">Enter</button>
 
     <p>What medium (not too hard, not to easy) assignments do you have to do?</p>
-    <input style="display:none" type="text" id="mediumA1">
-    <input style="display:none" type="text" id="mediumA2">
-    <input style="display:none" tsype="text" id="mediumA3">
-    <input style="display:none" type="text" id="mediumA4">
-    <input style="display:none" type="text" id="mediumA5">
+    <input class="red" style="display:none" type="text" id="mediumA1">
+    <input class="yellow" style="display:none" type="text" id="mediumA2">
+    <input class="green" style="display:none" tsype="text" id="mediumA3">
+    <input class="blue" style="display:none" type="text" id="mediumA4">
+    <input class="purple" style="display:none" type="text" id="mediumA5">
 
-    <button class="btn btn-default" onclick="displayH();">Enter</button>
+    <p> </p>
+
+    <button style="display:none" id="saveM" class="btn btn-primary" onclick="displayH();">Save</button>
 
 </div>
 
 
 <div id="hardAssignments" style="display:none">
-  <p>How many hard assignments do you have to do today?</p>
-  <input min="0" max="5" type="number" id="numHAI">
-  <button class="btn btn-default" onclick="showInputH()">Enter</button>
+  <p>How many hard assignments do you have to do today? (If you don't have any put 0)</p>
+  <input class="pink" min="0" max="5" type="number" id="numHAI">
+  <p></p>
+  <button class="btn btn-primary" onclick="showInputH();">Enter</button>
 
   <p>What hard assignments do you have to do?</p>
-    <input style="display:none" type="text" id="hardA1">
-    <input style="display:none" type="text" id="hardA2">
-    <input style="display:none" type="text"id="hardA3">
-    <input style="display:none" type="text" id="hardA4">
-    <input style="display:none" type="text" id="hardA5">
+    <input class="red" style="display:none" type="text" id="hardA1">
+    <input class="yellow" style="display:none" type="text" id="hardA2">
+    <input class="green" style="display:none" type="text"id="hardA3">
+    <input class="blue" style="display:none" type="text" id="hardA4">
+    <input class="purple" style="display:none" type="text" id="hardA5">
 
-  <button class="btn btn-default" onclick="makeToDoList(); displayTDL();">Enter</button>
+    <p> </p>
+
+  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); displayTDL();">Save</button>
 
 </div>
 
@@ -110,68 +108,81 @@
 <div id=toDoList style="display:none">
   <h1>Homework Blocks for Today:</h1>
 
+<div class="easy-block" id="easy-block">
 <h3>Easy Block</h3>
-  <input type="checkbox" id="toDo1" name="toDo1" value="toDo1"/>
-  <label class="strikethrough" for="toDo1"><span id="result1"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo1" name="toDo1" value="toDo1"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo1"><span id="result1"></span></label><br>
 
-  <input type="checkbox" id="toDo2" name="toDo2" value="toDo2"/>
-  <label class="strikethrough" for="toDo2"><span id="result2"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo2" name="toDo2" value="toDo2"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2"><span id="result2"></span></label><br>
 
-  <input type="checkbox" id="toDo3" name="toDo3" value="toDo3"/>
-  <label class="strikethrough" for="toDo3"><span id="result3"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo3" name="toDo3" value="toDo3"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo3"><span id="result3"></span></label><br>
 
-  <input type="checkbox" id="toDo4" name="toDo4" value="toDo4"/>
-  <label class="strikethrough" for="toDo4"><span id="result4"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo4" name="toDo4" value="toDo4"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo4"><span id="result4"></span></label><br>
 
-  <input type="checkbox" id="toDo5" name="toDo5" value="toDo5"/>
-  <label class="strikethrough" for="toDo1"><span id="result5"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo5" name="toDo5" value="toDo5"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1"><span id="result5"></span></label><br>
+</div>
 
 
-
+<div class="medium-block" id="medium-block">
 <h3>Medium Block</h3>
 
-  <input type="checkbox" id="toDo1M" name="toDo1M" value="toDo1M"/>
-  <label class="strikethrough" for="toDo1M"><span id="result1M"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo1M" name="toDo1M" value="toDo1M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1M"><span id="result1M"></span></label><br>
 
-  <input type="checkbox" id="toDo2M" name="toDo2M" value="toDo2M"/>
-  <label class="strikethrough" for="toDo2M"><span id="result2M"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo2M" name="toDo2M" value="toDo2M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2M"><span id="result2M"></span></label><br>
 
-  <input type="checkbox" id="toDo3M" name="toDo3M" value="toDo3M"/>
-  <label class="strikethrough" for="toDo3M"><span id="result3M"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo3M" name="toDo3M" value="toDo3M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo3M"><span id="result3M"></span></label><br>
 
-  <input type="checkbox" id="toDo4M" name="toDo4M" value="toDo4M"/>
-  <label class="strikethrough" for="toDo4M"><span id="result4M"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo4M" name="toDo4M" value="toDo4M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo4M"><span id="result4M"></span></label><br>
 
-  <input type="checkbox" id="toDo5M" name="toDo5M" value="toDo5M"/>
-  <label class="strikethrough" for="toDo1M"><span id="result5M"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo5M" name="toDo5M" value="toDo5M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1M"><span id="result5M"></span></label><br>
+</div>
 
-
+<div class="hard-block" id="hard-block">
 <h3>Hard Block</h3>
-  <input type="checkbox" id="toDo1H" name="toDo1H" value="toDo1H"/>
-  <label class="strikethrough" for="toDo1H"><span id="result1H"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo1H" name="toDo1H" value="toDo1H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1H"><span id="result1H"></span></label><br>
 
-  <input type="checkbox" id="toDo2H" name="toDo2H" value="toDo2H"/>
-  <label class="strikethrough" for="toDo2H"><span id="result2H"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo2H" name="toDo2H" value="toDo2H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2H"><span id="result2H"></span></label><br>
 
-  <input type="checkbox" id="toDo3H" name="toDo3H" value="toDo3H"/>
-  <label class="strikethrough" for="toDo3H"><span id="result3H"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo3H" name="toDo3H" value="toDo3H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo3H"><span id="result3H"></span></label><br>
 
-  <input type="checkbox" id="toDo4H" name="toDo4H" value="toDo4H"/>
-  <label class="strikethrough" for="toDo4H"><span id="result4H"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo4H" name="toDo4H" value="toDo4H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo4H"><span id="result4H"></span></label><br>
 
-  <input type="checkbox" id="toDo5H" name="toDo5H" value="toDo5H"/>
-  <label class="strikethrough" for="toDo1H"><span id="result5H"></span></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo5H" name="toDo5H" value="toDo5H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo1H"><span id="result5H"></span></label><br>
+</div>
 
 
-</h3>
+<div id = "ithbNAV">
+<center><p>Now head over to ITHB to complete your homework blocks!</p></center>
+<a href="https://sprz05.github.io/ITHIB_v1.0/" class="btn btn-primary">Head over to ITHB</a>
+</div>
 
 </div>
 
 
-<center><p>Now head over to ITHB to complete your homework blocks!</p></center>
-<a href="https://sprz05.github.io/ITHIB_v1.0/" class="btn btn-primary">Head over to ITHB</a>
+<div style="display:none" id="noHWDiv">
+  <center><p>Looks like you don't have any homework today! Wanna head over to WWC</p></center>
+  <a href="https://the-programmingclub.github.io/World-Wide-Clubs/" class="btn btn-primary">Head over to WWC</a>
+</div>
+
+
+
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
+
 
 
 
@@ -180,6 +191,9 @@
 <script>
 
   /* START of show input functions */
+  function dontShowInput1E(){
+    document.getElementById("easy-block").style.display = "none";
+  }
 
   function onlyShowInput1(){
       document.getElementById("easyA1").style.display = "block";
@@ -234,6 +248,9 @@
 
 
   /* START: medium show input functions */
+  function dontShowInput1M(){
+    document.getElementById("medium-block").style.display = "none";
+  }
 
   function onlyShowInput1M(){
       document.getElementById("mediumA1").style.display = "block";
@@ -289,6 +306,9 @@
 
 
       /* START: hard show input functions */
+      function dontShowInput1H(){
+        document.getElementById("hard-block").style.display = "none";
+      }
 
       function onlyShowInput1H(){
         document.getElementById("hardA1").style.display = "block";
@@ -342,59 +362,120 @@
           document.getElementById("hardA5").style.display = "block";
           }
 
+/*START show save btns*/
+
+function showSaveE(){
+  document.getElementById("saveE").style.display = "block";
+}
+
+function showSaveM(){
+  document.getElementById("saveM").style.display = "block";
+}
+
+function showSaveH(){
+  document.getElementById("saveH").style.display = "block";
+}
+
+function dontShowSaveE(){
+  document.getElementById("saveE").style.display = "hidden";
+}
+
+function dontShowSaveM(){
+  document.getElementById("saveM").style.display = "hidden";
+}
+
+function dontShowSaveH(){
+  document.getElementById("saveH").style.display = "hidden";
+}
+
+/*END of show btns*/
+
 /* START: function show input easy*/
+
   function showInputE(){
   var numEAI = document.getElementById('numEAI');
-  	if (numEAI.value == 1){
+    if (numEAI.value == 0){
+        dontShowSaveE();
+        dontShowInput1E();
+        displayM();
+    }
+    else	if (numEAI.value == 1){
+        showSaveE();
       	onlyShowInput1();
   	} else if (numEAI.value == 2){
+        showSaveE();
       	onlyShowInput2();
     } else if (numEAI.value == 3){
+        showSaveE();
       	onlyShowInput3();
     } else if (numEAI.value == 4){
+        showSaveE();
       	onlyShowInput4();
     } else if (numEAI.value == 5){
+        showSaveE();
       	onlyShowInput5();
     } else{
-    	alert ("Try doing between 1-5 easy assignments");
+    	alert ("Try doing between 0-5 easy assignments");
     }
 
   }
   /* START: function show input medium*/
   function showInputM(){
   var numMAI = document.getElementById('numMAI');
+    if (numMAI.value == 0){
+        dontShowInput1M();
+        dontShowSaveM();
+        displayH();
+    }
     if (numMAI.value == 1){
+        showSaveM();
         onlyShowInput1M();
     } else if (numMAI.value == 2){
+        showSaveM();
         onlyShowInput2M();
     } else if (numMAI.value == 3){
+        showSaveM();
         onlyShowInput3M();
     } else if (numMAI.value == 4){
+        showSaveM();
         onlyShowInput4M();
     } else if (numMAI.value == 5){
+        showSaveM();
         onlyShowInput5M();
     } else{
-      alert ("Try doing between 1-5 medium assignments");
+      alert ("Try doing between 0-5 medium assignments");
     }
 
   }
+
+
   /* START: function show input hard*/
   function showInputH(){
   var numHAI = document.getElementById('numHAI');
-    if (numHAI.value == 1){
+    if (numHAI.value == 0){
+        dontShowInput1H();
+        dontShowSaveH();
+        displayTDL();
+    }
+    else if (numHAI.value == 1){
         onlyShowInput1H();
+        showSaveH();
     } else if (numHAI.value == 2){
         onlyShowInput2H();
+        showSaveH();
     } else if (numHAI.value == 3){
         onlyShowInput3H();
+        showSaveH();
     } else if (numHAI.value == 4){
         onlyShowInput4H();
+        showSaveH();
     } else if (numHAI.value == 5){
         onlyShowInput5H();
-    } else{
-      alert ("Try doing between 1-5 medium assignments");
+        showSaveH();
+    }else{
+      alert ("Try doing between 0-5 medium assignments");
     }
-  }
+}
 
 
 
