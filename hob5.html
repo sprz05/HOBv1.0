@@ -36,12 +36,18 @@
 
 <center>
   <div id="easyAssignments">
-    <p>How many easy assignments do you have to do today? (If you don't have any put 0)</p>
+    <p>How many easy assignments do you have to do today?</p>
     <input class="pink" min="0" max="5" type="number" id="numEAI" required>
 
     <p></p>
 
     <button class="btn btn-primary" onclick="showInputE();">Enter</button>
+   <p>
+   </p>
+   <button class="btn btn-primary" onclick="dontShowInput1E();
+        displayM();">
+        I dont have any easy assignments today
+        </button>
 
       <p>What easy assignments do you have to do today?</p>
         <input class="red" style="display:none" type="text" id="easyA1">
@@ -56,12 +62,18 @@
 
 
 <div id="mediumAssignments" style="display:none">
-  <p>How many medium assignments do you have to do today? (If you don't have any put 0)</p>
+  <p>How many medium assignments do you have to do today?</p>
   <input class="pink" min="0" max="5" type="number" id="numMAI">
 
   <p></p>
 
   <button class="btn btn-primary" onclick="showInputM();">Enter</button>
+  <p>
+   </p>
+     <button class="btn btn-primary" onclick="dontShowInput1M();
+        displayH();">
+        I dont have any medium assignments today
+        </button>
 
     <p>What medium (not too hard, not to easy) assignments do you have to do?</p>
     <input class="red" style="display:none" type="text" id="mediumA1">
@@ -78,10 +90,16 @@
 
 
 <div id="hardAssignments" style="display:none">
-  <p>How many hard assignments do you have to do today? (If you don't have any put 0)</p>
+  <p>How many hard assignments do you have to do today?</p>
   <input class="pink" min="0" max="5" type="number" id="numHAI">
   <p></p>
   <button class="btn btn-primary" onclick="showInputH();">Enter</button>
+  <p>
+   </p>
+      <button class="btn btn-primary" onclick="dontShowInput1H();
+        makeToDoList(); displayTDL();">
+        I dont have any hard assignments today
+        </button>
 
   <p>What hard assignments do you have to do?</p>
     <input class="red" style="display:none" type="text" id="hardA1">
@@ -167,6 +185,7 @@
 </div>
 
 
+
 <div id = "ithbNAV">
 <center><p>Now head over to ITHB to complete your homework blocks!</p></center>
 <a href="https://sprz05.github.io/ITHIB_v1.0/" class="btn btn-primary">Head over to ITHB</a>
@@ -175,17 +194,9 @@
 </div>
 
 
-<div style="display:none" id="noHWDiv">
-  <center><p>Looks like you don't have any homework today! Wanna head over to WWC</p></center>
-  <a href="https://the-programmingclub.github.io/World-Wide-Clubs/" class="btn btn-primary">Head over to WWC</a>
-</div>
-
-
 
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
-
-
 
 
 
@@ -396,12 +407,8 @@ function dontShowSaveH(){
 
   function showInputE(){
   var numEAI = document.getElementById('numEAI');
-    if (numEAI.value == 0){
-        dontShowSaveE();
-        dontShowInput1E();
-        displayM();
-    }
-    else	if (numEAI.value == 1){
+
+   	if (numEAI.value == 1){
         showSaveE();
       	onlyShowInput1();
   	} else if (numEAI.value == 2){
@@ -424,12 +431,7 @@ function dontShowSaveH(){
   /* START: function show input medium*/
   function showInputM(){
   var numMAI = document.getElementById('numMAI');
-    if (numMAI.value == 0){
-        dontShowInput1M();
-        dontShowSaveM();
-        displayH();
-    }
-    else if (numMAI.value == 1){
+    if (numMAI.value == 1){
         showSaveM();
         onlyShowInput1M();
     } else if (numMAI.value == 2){
@@ -454,12 +456,7 @@ function dontShowSaveH(){
   /* START: function show input hard*/
   function showInputH(){
   var numHAI = document.getElementById('numHAI');
-    if (numHAI.value == 0){
-        dontShowInput1H();
-        dontShowSaveH();
-        displayTDL();
-    }
-    else if (numHAI.value == 1){
+   if (numHAI.value == 1){
         onlyShowInput1H();
         showSaveH();
     } else if (numHAI.value == 2){
