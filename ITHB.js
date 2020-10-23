@@ -592,16 +592,16 @@ document.getElementById("inputHText").style.display = "block";
           document.getElementById("hardA6").style.display = "block";
 
           document.getElementById("hardA7").style.display = "none";
-          document.getElementById("toDo7").style.display = "none";
+          document.getElementById("toDo7H").style.display = "none";
 
           document.getElementById("hardA8").style.display = "none";
-          document.getElementById("toDo8").style.display = "none";
+          document.getElementById("toDo8H").style.display = "none";
 
           document.getElementById("hardA9").style.display = "none";
-          document.getElementById("toDo9").style.display = "none";
+          document.getElementById("toDo9H").style.display = "none";
 
           document.getElementById("hardA10").style.display = "none";
-          document.getElementById("toDo10").style.display = "none";
+          document.getElementById("toDo10H").style.display = "none";
           }
           function onlyShowInput7H(){
           document.getElementById("hardA1").style.display = "block";
@@ -613,13 +613,13 @@ document.getElementById("inputHText").style.display = "block";
           document.getElementById("hardA7").style.display = "block";
 
           document.getElementById("hardA8").style.display = "none";
-          document.getElementById("toDo8").style.display = "none";
+          document.getElementById("toDo8H").style.display = "none";
 
           document.getElementById("hardA9").style.display = "none";
-          document.getElementById("toDo9").style.display = "none";
+          document.getElementById("toDo9H").style.display = "none";
 
           document.getElementById("hardA10").style.display = "none";
-          document.getElementById("toDo10").style.display = "none";
+          document.getElementById("toDo10H").style.display = "none";
           }
 
           function onlyShowInput8H(){
@@ -633,10 +633,10 @@ document.getElementById("inputHText").style.display = "block";
           document.getElementById("hardA8").style.display = "block";
 
           document.getElementById("hardA9").style.display = "none";
-          document.getElementById("toDo9").style.display = "none";
+          document.getElementById("toDo9H").style.display = "none";
 
           document.getElementById("hardA10").style.display = "none";
-          document.getElementById("toDo10").style.display = "none";
+          document.getElementById("toDo10H").style.display = "none";
           }
 
           function onlyShowInput9H(){
@@ -651,7 +651,7 @@ document.getElementById("inputHText").style.display = "block";
           document.getElementById("hardA9").style.display = "block";
 
           document.getElementById("hardA10").style.display = "none";
-          document.getElementById("toDo10").style.display = "none";
+          document.getElementById("toDo10H").style.display = "none";
           }
 
           function onlyShowInput10H(){
@@ -682,19 +682,8 @@ function showSaveH(){
   document.getElementById("saveH").style.display = "block";
 }
 
-function dontShowSaveE(){
-  document.getElementById("saveE").style.display = "hidden";
-}
-
-function dontShowSaveM(){
-  document.getElementById("saveM").style.display = "hidden";
-}
-
-function dontShowSaveH(){
-  document.getElementById("saveH").style.display = "hidden";
-}
-
 /*END of show btns*/
+
 
 /* START: function show input easy*/
 
@@ -768,7 +757,7 @@ function dontShowSaveH(){
         showSaveM();
         onlyShowInput8M();
     } else if (numMAI.value == 9){
-        showSave9();
+        showSaveM();
         onlyShowInput9M();
     } else if (numMAI.value == 10){
         showSaveM();
