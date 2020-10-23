@@ -38,7 +38,7 @@ document.getElementById("inputHText").style.display = "block";
       document.getElementById("toDo8").style.display = "none";
 
       document.getElementById("easyA9").style.display = "none";
-      document.getElementById("toDo59").style.display = "none";
+      document.getElementById("toDo9").style.display = "none";
 
       document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
