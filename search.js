@@ -1,3 +1,28 @@
+function search(){
+	searchM1();
+	searchM2();
+	searchM3();
+	searchM4();
+	searchM5();
+    searchM6();
+	searchM7();
+	searchM8();
+	searchM9();
+	searchM10();
+    
+	searchH1();
+	searchH2();
+	searchH3();
+	searchH4();
+	searchH5();
+    searchH6();
+	searchH7();
+	searchH8();
+	searchH9();
+	searchH10();
+}
+
+
 function searchM1() {
   var str = document.getElementById('mediumA1').value;
 
@@ -129,9 +154,9 @@ function searchH1() {
   var str = document.getElementById('hardA1').value;
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
-     document.getElementById("slideshowHelpBtn10").style.display = "block";
+     document.getElementById("slideshowHelpBtn11").style.display = "block";
   } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn10").style.display = "block";
+  	document.getElementById("mathHelpBtn11").style.display = "block";
   }
 
 }
