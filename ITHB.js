@@ -869,5 +869,6 @@ function makeToDoList(){
 
 
 function set(){
- localStorage.setItem('hobList', document.getElementById("toDoList").innerHTML);
+var saved = localStorage.setItem('hobList', document.getElementById("toDoList").innerHTML);
+console.log(saved)
 }
