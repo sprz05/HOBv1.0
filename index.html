@@ -149,7 +149,7 @@
 
     <p> </p>
 
-  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); displayTDL();">Save</button>
+  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); set(); displayTDL();">Save</button>
 
      <p>
    or
@@ -173,6 +173,7 @@ I don't have any hard assignments today </button>
 <!--Start of To-do List-->
 
 <div text-align="center" id=toDoList style="display:none">
+  <div id="hintTxt">
   <h1>Homework blocks for today:</h1>
 
   <p>
@@ -181,11 +182,11 @@ I don't have any hard assignments today </button>
   <p>
    Check out some tips and tricks on <a target="_blank" href="https://sprz05.github.io/SLAB_v1.0/">SLAB</a> for some advice, tips and tricks with your homework!
   </p>
-
+</div>
 <div class="easy-block" id="easy-block">
 <h3>Easy Block ✌️:</h3>
 <p>
-All your easy assignments for the day
+All your easy assignments for the day cross them off as you finish them.
 </p>
   <input type="checkbox" style="font-size: 30px;" id="toDo1" name="toDo1" value="toDo1"/>
   <label style="font-size: 30px;" class="strikethrough" for="toDo1"><span id="result1"></span></label><br>
@@ -223,9 +224,8 @@ All your easy assignments for the day
 <div class="medium-block" id="medium-block">
 <h3>Medium Block 👍:</h3>
 <p>
-All your medium assignments for the day.
+All your medium assignments for the day cross them off as you finish them.
 </p>
-
 
   <input type="checkbox" style="font-size: 30px;"id="toDo1M" name="toDo1M" value="toDo1M"/>
   <label style="font-size: 30px;"class="strikethrough" for="toDo1M"><span id="result1M"></span>
@@ -354,7 +354,7 @@ All your medium assignments for the day.
 <div class="hard-block" id="hard-block">
 <h3>Hard Block 🤟</h3>
 <p>
-All your hard assignments for the day.
+All your hard assignments for the day cross them off as you finish them.
 </p>
 
   <input type="checkbox" style="font-size: 30px;" id="toDo1H" name="toDo1H" value="toDo1H"/>
