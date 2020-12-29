@@ -866,3 +866,8 @@ function makeToDoList(){
  document.getElementById("result9H").innerHTML = document.getElementById('hardA9').value;
  document.getElementById("result10H").innerHTML = document.getElementById('hardA10').value;
 }
+
+
+function set(){
+ localStorage.setItem('hobList', document.getElementById("toDoList").innerHTML);
+}
