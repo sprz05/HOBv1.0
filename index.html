@@ -70,8 +70,7 @@
         <input class="lightPurple" style="display:none" type="text" id="easyA9">
         <input class="darkPurple" style="display:none" type="text" id="easyA10">
 
-
-      <button style="display:none" id="saveE" class="btn btn-primary" onclick="displayM();">Save</button>
+      <button style="display:none" id="saveE" class="btn btn-primary" onclick="displayM();">next</button>
 
 
      <p>
@@ -112,8 +111,7 @@
 
 
     <p> </p>
-
-    <button style="display:none" id="saveM" class="btn btn-primary" onclick="displayH();">Save</button>
+    <button style="display:none" id="saveM" class="btn btn-primary" onclick="displayH();">Next</button>
 
          <p>
    or
@@ -123,6 +121,8 @@
         displayH();">
         I don't have any medium assignments today
         </button>
+        <br>
+    <button class="btn btn-link" onclick="displayE();">Go Back</button>
 
 </div>
 
@@ -149,7 +149,7 @@
 
     <p> </p>
 
-  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); set(); displayTDL();">Save</button>
+  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); set(); displayTDL();">Enter</button>
 
      <p>
    or
@@ -158,6 +158,8 @@
   <button class="btn btn-secondary" onclick="dontShowInput1H();
         makeToDoList(); displayTDL(); search(); set()">
 I don't have any hard assignments today </button>
+        <br>
+    <button class="btn btn-link" onclick="displayMGoBack();">Go Back</button>
 
 
 
@@ -179,9 +181,6 @@ I don't have any hard assignments today </button>
   <p>
   Nice! Your homeworks organized into block now! you can complete them in any order! Use <a target="_blank" href="https://sprz05.github.io/ITHIB_v1.0/">ITHB</a>  to get through them! 
   </p> 
-  <p>
-   Check out some tips and tricks on <a target="_blank" href="https://sprz05.github.io/SLAB_v1.0/">SLAB</a> for some advice, tips and tricks with your homework!
-  </p>
 </div>
 <div class="easy-block" id="easy-block">
 <h3>Easy Block ✌️:</h3>
@@ -500,6 +499,10 @@ All your hard assignments for the day cross them off as you finish them.
 
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
+
+<br>
+
+<a href="hobSchedule.html" target="_blank"><button class="btn btn-danger">See my most recently made HOB list</button></a>
 
 
 

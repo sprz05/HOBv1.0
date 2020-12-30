@@ -689,8 +689,20 @@ function showSaveH(){
 
   function showInputE(){
   var numEAI = document.getElementById('numEAI');
-    if (numEAI.value == 0){
+    if (numEAI.value == 0 || numEAI.value == null || numEAI.value == ""){
    		alert("If you don't have any, click I don't have any easy assignments today");
+            document.getElementById("inputEText").style.display = "none";
+            document.getElementById("saveE").style.display = "none";
+            document.getElementById("easyA1").style.display = "none";
+            document.getElementById("easyA2").style.display = "none";
+            document.getElementById("easyA3").style.display = "none";
+            document.getElementById("easyA4").style.display = "none";
+            document.getElementById("easyA5").style.display = "none";
+            document.getElementById("easyA6").style.display = "none";
+            document.getElementById("easyA7").style.display = "none";
+            document.getElementById("easyA8").style.display = "none";
+            document.getElementById("easyA9").style.display = "none";
+            document.getElementById("easyA10").style.display = "none";
    }else if (numEAI.value == 1){
         showSaveE();
       	onlyShowInput1();
@@ -729,8 +741,20 @@ function showSaveH(){
   /* START: function show input medium*/
   function showInputM(){
   var numMAI = document.getElementById('numMAI');
-   if (numMAI.value == 0){
-   			alert("If you don't have any, click I don't have any medium assignments");
+   if (numMAI.value == 0 || numMAI.value == null || numMAI.value == ""){
+   	      alert("If you don't have any, click I don't have any medium assignments");
+            document.getElementById("inputMText").style.display = "none";
+            document.getElementById("saveM").style.display = "none";
+            document.getElementById("mediumA1").style.display = "none";
+            document.getElementById("mediumA2").style.display = "none";
+            document.getElementById("mediumA3").style.display = "none";
+            document.getElementById("mediumA4").style.display = "none";
+            document.getElementById("mediumA5").style.display = "none";
+            document.getElementById("mediumA6").style.display = "none";
+            document.getElementById("mediumA7").style.display = "none";
+            document.getElementById("mediumA8").style.display = "none";
+            document.getElementById("mediumA9").style.display = "none";
+            document.getElementById("mediumA10").style.display = "none";
    }
    else if (numMAI.value == 1){
         showSaveM();
@@ -773,8 +797,20 @@ function showSaveH(){
   /* START: function show input hard*/
   function showInputH(){
   var numHAI = document.getElementById('numHAI');
-   if (numHAI.value == 0){
+   if (numHAI.value == 0 || numHAI.value == null || numHAI.value == ""){ 
    	alert("If you don't have any, click I don't have any hard assignents");
+                  document.getElementById("inputHText").style.display = "none";
+            document.getElementById("saveH").style.display = "none";
+            document.getElementById("hardA1").style.display = "none";
+            document.getElementById("hardA2").style.display = "none";
+            document.getElementById("hardA3").style.display = "none";
+            document.getElementById("hardA4").style.display = "none";
+            document.getElementById("hardA5").style.display = "none";
+            document.getElementById("hardA6").style.display = "none";
+            document.getElementById("hardA7").style.display = "none";
+            document.getElementById("hardA8").style.display = "none";
+            document.getElementById("hardA9").style.display = "none";
+            document.getElementById("hardA10").style.display = "none";
    }
     else if (numHAI.value == 1){
         onlyShowInput1H();
@@ -814,6 +850,17 @@ function showSaveH(){
 
 
 /* display functions in form */
+function displayE(){
+  document.getElementById("easyAssignments").style.display = "block";
+  document.getElementById("mediumAssignments").style.display = "none";
+}
+
+
+function displayMGoBack(){
+  document.getElementById("mediumAssignments").style.display = "block";
+  document.getElementById("hardAssignments").style.display = "none";
+}
+
 function displayM(){
   document.getElementById("easyAssignments").style.display = "none";
   document.getElementById("mediumAssignments").style.display = "block";
