@@ -28,6 +28,10 @@
 	<button class="btn btn-danger" onclick="reload()">Reload to see your list</button>
 </div>
 
+
+<a id="makeNew" href="index.html" target="_blank" style="color:white; display:none"><buttton class="btn btn-primary">Make a new HOB List</buttton></a>
+
+
 <style>
 	#hintTxt{
 		display:none;
@@ -48,6 +52,7 @@
 		console.log("welcome");
 	} else {
 		getAndSet();
+		document.getElementById("makeNew").style.display = "block";
 	}
 }
 
