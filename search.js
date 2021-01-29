@@ -28,9 +28,7 @@ function searchM1() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn1").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn1").style.display = "block";
-  }
+  } 
 
 }
 
@@ -40,9 +38,7 @@ function searchM2() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn2").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn2").style.display = "block";
-  }
+  } 
 
 }
 
@@ -52,9 +48,7 @@ function searchM3() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn3").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn3").style.display = "block";
-  }
+  } 
 
 }
 
@@ -64,8 +58,6 @@ function searchM4() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn4").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn4").style.display = "block";
   }
 
 }
@@ -77,9 +69,7 @@ function searchM5() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn5").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn5").style.display = "block";
-  }
+  } 
 
 }
 
@@ -89,10 +79,7 @@ function searchM6() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn6").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn6").style.display = "block";
-  }
-
+  } 
 }
 
 
@@ -101,8 +88,6 @@ function searchM7() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn7").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn7").style.display = "block";
   }
 
 }
@@ -114,8 +99,6 @@ function searchM8() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn8").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn8").style.display = "block";
   }
 
 }
@@ -126,9 +109,7 @@ function searchM9() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn9").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn9").style.display = "block";
-  }
+  } 
 
 }
 
@@ -137,10 +118,7 @@ function searchM10() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn10").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn10").style.display = "block";
-  }
-
+  } 
 }
 
 
@@ -155,8 +133,6 @@ function searchH1() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn11").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn11").style.display = "block";
   }
 
 }
@@ -167,9 +143,7 @@ function searchH2() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn12").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn12").style.display = "block";
-  }
+  } 
 
 }
 
@@ -179,9 +153,7 @@ function searchH3() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn13").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn13").style.display = "block";
-  }
+  } 
 
 }
 
@@ -191,9 +163,7 @@ function searchH4() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn14").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn14").style.display = "block";
-  }
+  } 
 
 }
 
@@ -204,10 +174,7 @@ function searchH5() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn15").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn15").style.display = "block";
   }
-
 }
 
 
@@ -216,9 +183,7 @@ function searchH6() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn16").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn16").style.display = "block";
-  }
+  } 
 
 }
 
@@ -228,10 +193,7 @@ function searchH7() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn17").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn17").style.display = "block";
-  }
-
+  } 
 }
 
 
@@ -241,8 +203,6 @@ function searchH8() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn18").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn18").style.display = "block";
   }
 
 }
@@ -253,9 +213,7 @@ function searchH9() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn19").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn19").style.display = "block";
-  }
+  } 
 
 }
 
@@ -264,9 +222,6 @@ function searchH10() {
 
   if (str.includes("slideshow") || str.includes("Slideshow") || str.includes("SLIDESHOW")) {
      document.getElementById("slideshowHelpBtn20").style.display = "block";
-  } else if (str.includes("math") || str.includes("Math") || str.includes("MATH")) {
-  	document.getElementById("mathHelpBtn20").style.display = "block";
-  }
-
+  } 
 }
 
