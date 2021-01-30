@@ -40,8 +40,40 @@
 </body>
 </html>
 
+<script>
+  
 
+// Add a "checked" symbol when clicking on a list item
+var list = document.getElementById('myULEasy');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
 
+</script>
+<script>
+// Add a "checked" symbol when clicking on a list item
+var list = document.getElementById('myULHard');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+</script>
+<script>
+  
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.getElementById('myULMedium');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+</script>
 
 <script>
 	var savedHobList = localStorage.getItem('hobList');

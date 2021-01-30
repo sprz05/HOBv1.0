@@ -79,6 +79,67 @@
 </div>
 
 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HOB</title>
+
+
+
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+      <!--     Fonts and icons     -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+      <!-- Nucleo Icons -->
+      <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+      <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+      <!-- Font Awesome Icons -->
+      <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+      <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+      <!-- CSS Files -->
+      <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="general.css" />
+      <!--JS Files-->
+      <script src="ITHB.js"></script>
+      <script src="search.js"></script>
+
+<style>
+.h3{
+  color:black;
+}
+p{
+  color: black;
+}
+body {
+
+font-family: 'Roboto', sans-serif;
+font-size: 22px;
+text-align: center;
+background: white;
+font-weight: 100;
+padding-top: 50px;
+padding-right: 80px;
+padding-bottom: 50px;
+padding-left: 80px;
+
+}
+</style>
+
+
+  </head>
+
+
+  <body style="font-family: 'Roboto', sans-serif;">
+
+
+
 <!--Start of Form-->
 
 <center>
@@ -106,7 +167,8 @@
         <input class="lightPurple" style="display:none" type="text" id="easyA9">
         <input class="darkPurple" style="display:none" type="text" id="easyA10">
 
-      <button style="display:none" id="saveE" class="btn btn-primary" onclick="displayM();">next</button>
+
+      <button style="display:none" id="saveE" class="btn btn-primary" onclick="displayM();">Save</button>
 
 
      <p>
@@ -147,7 +209,8 @@
 
 
     <p> </p>
-    <button style="display:none" id="saveM" class="btn btn-primary" onclick="displayH();">Next</button>
+
+    <button style="display:none" id="saveM" class="btn btn-primary" onclick="displayH();">Save</button>
 
          <p>
    or
@@ -157,8 +220,6 @@
         displayH();">
         I don't have any medium assignments today
         </button>
-        <br>
-    <button class="btn btn-link" onclick="displayE();">Go Back</button>
 
 </div>
 
@@ -167,7 +228,7 @@
   <p>How many hard assignments do you have to do today?</p>
   <input class="pink" min="0" max="5" type="number" id="numHAI">
   <p></p>
-  <button class="btn btn-primary" onclick="showInputHText(); showSaveH(); showInputH();">Enter</button>
+  <button class="btn btn-primary" onclick="showInputHText(); showSaveH(); search(); showInputH();">Enter</button>
 
 
 
@@ -185,17 +246,15 @@
 
     <p> </p>
 
-  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); set(); displayTDL();">Enter</button>
+  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); set(); displayTDL();">Save</button>
 
      <p>
    or
    </p>
 
   <button class="btn btn-secondary" onclick="dontShowInput1H();
-        makeToDoList(); displayTDL(); search(); set()">
+        makeToDoList(); displayTDL();">
 I don't have any hard assignments today </button>
-        <br>
-    <button class="btn btn-link" onclick="displayMGoBack();">Go Back</button>
 
 
 
@@ -211,29 +270,20 @@ I don't have any hard assignments today </button>
 <!--Start of To-do List-->
 
 <div text-align="center" id=toDoList style="display:none">
-  <div id="hintTxt">
   <h1>Homework blocks for today:</h1>
 
   <p>
-  Nice! Your homeworks organized into block now! you can complete them in any order! Use <a target="_blank" href="https://sprz05.github.io/ITHIB_v1.0/">ITHB</a>  to get through them! 
-  </p> 
-</div>
+  When you finish an assignment cross it off!
+  </p>
+
+
 <div class="easy-block" id="easy-block">
-<b><h3>Easy Block ✌️:</h3></b>
-
-<div style="display:none">
-<input type="text" id="myInput" class="inputEasy" placeholder="Assignment Title...">
-  <span onclick="newEasyElement()" class="addBtn">Add</span>
-</div>
-
-
+<h3>Easy Block ✌️:</h3>
 <p>
-All your easy assignments for the day cross them off as you finish them.
+All your easy assignments for the day
 </p>
 
-
-
-<ul id="myULEasy">
+  <ul id="myULEasy">
   <li id="toDo1"><span id="result1"></span></li>
 
   <li id="toDo2"><span id="result2"></span></li>
@@ -255,6 +305,8 @@ All your easy assignments for the day cross them off as you finish them.
   <li id="toDo10"><span id="result10"></span></li> 
 </ul>
 
+</div>
+
 <script>
   
 
@@ -268,24 +320,14 @@ list.addEventListener('click', function(ev) {
 
 </script>
 
-
-</div>
-
-
 <div class="medium-block" id="medium-block">
 <h3>Medium Block 👍:</h3>
-
-<div style="display:none">
-<input type="text" id="myInputMedium" class="inputMedium" placeholder="Assignment Title...">
-  <span onclick="newMediumElement()" class="addBtn">Add</span>
-</div>
-
 <p>
-All your medium assignments for the day cross them off as you finish them.
+All your medium assignments for the day.
 </p>
 
 
-<ul id="myULMedium">
+  <ul id="myULMedium">
   <li id="toDo1M"><span id="result1M"></span></li>
 
   <li id="toDo2M"><span id="result2M"></span></li>
@@ -307,6 +349,9 @@ All your medium assignments for the day cross them off as you finish them.
   <li id="toDo10M"><span id="result10M"></span></li> 
 </ul>
 
+
+</div>
+
 <script>
   
 
@@ -319,23 +364,14 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 </script>
-</div>
 
 <div class="hard-block" id="hard-block">
 <h3>Hard Block 🤟</h3>
-
-
-<div style="display:none">
-<input type="text" id="myInputHard" class="inputHard" placeholder="Assignment Title...">
-  <span onclick="newHardElement()" class="addBtn">Add</span>
-</div>
-
-
 <p>
-All your hard assignments for the day cross them off as you finish them.
+All your hard assignments for the day.
 </p>
 
-<ul id="myULHard">
+  <ul id="myULHard">
   <li id="toDo1H"><span id="result1H"></span></li>
 
   <li id="toDo2H"><span id="result2H"></span></li>
@@ -357,6 +393,9 @@ All your hard assignments for the day cross them off as you finish them.
   <li id="toDo10H"><span id="result10H"></span></li> 
 </ul>
 
+
+</div>
+
 <script>
 // Add a "checked" symbol when clicking on a list item
 var list = document.getElementById('myULHard');
@@ -368,16 +407,9 @@ list.addEventListener('click', function(ev) {
 
 </script>
 
-  
-</div>
-
-
-
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
-
-<br>
-
-<a href="hobSchedule.html" target="_blank"><button class="btn btn-danger">See my most recently made HOB list</button></a>
+    <button onclick="showGameDiv();">I finished all my assignments</button>
+    <button onclick="restartTDL();">Edit</button>
+    <a href="index.html"><button onclick="restartTDL();">New To Do List</button></a>
 
 
 
@@ -389,121 +421,49 @@ list.addEventListener('click', function(ev) {
 </html>
 
 
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
 
 
 
-<body style="display:none">
-<!DOCTYPE html>
-<html>
+<div id="gameDiv" style="display:none">
+<p>There's no way I can check so I'm going to trust your word, as a reward for finishing all your assignments, want to play some games?</p>
+<br>
+  <a href="game.html" target="_blank" class="btn btn-primary">Yes! I earned my reward!</a>
+  <button class="btn btn-warning" onclick="hideGameDiv();">No, go back I haven't finished my assignments</button>
+</div>
 
-<head>
+<script>
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+function showGameDiv(){
+    document.getElementById("gameDiv").style.display = "block";
+    document.getElementById("toDoList").style.display = "none";
+  }
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
-<!--     Fonts and icons     -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<!-- Nucleo Icons -->
-<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
-<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-<!-- Font Awesome Icons -->
-<link href="./assets/css/font-awesome.css" rel="stylesheet" />
-<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-<link href="scroll.css" rel="stylesheet" />
-<!-- CSS Files -->
-<link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="assets\css\background.css">
-<link rel="stylesheet" href="assets\css\draggable.css">
 
-<style>
-p{
-  font-size: 25px;
+function hideGameDiv(){
+    document.getElementById("toDoList").style.display = "block";
+    document.getElementById("gameDiv").style.display = "none";
+  }
+
+
+  function restartTDL(){
+    document.getElementById("easyAssignments").style.display = "block";
+    document.getElementById("toDoList").style.display = "none";
+  }
+    
+function set(){
+var ToDoListToSave = document.getElementById("toDoList").innerHTML;
+localStorage.setItem('hobList', ToDoListToSave);
+console.log(ToDoListToSave)
 }
-h1{
-  color:white;
-}
-iframe{
-overflow-x: scroll;
-}
-#mySidenav {
-  position: absolute;
-  transition: 0.3s;
-  padding: 15px;
-  width: 100px;
-  left: -10px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  border-radius: 0 5px 5px 0;
-}
-#about {
-  top: 80px;
-}
+</script>
 
-#mydiv2 {
-  position: absolute;
-  z-index: 9;
-  background-color: #f1f1f1;
-  text-align: center;
-  border: 1px solid #d3d3d3;
-}
-
-#mydivheader2 {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: Yellow;
-  color: #fff;
-}
-
-#mydiv3 {
-  position: absolute;
-  z-index: 9;
-  text-align: center;
-  border: 1px solid #d3d3d3;
-}
-
-#mydivheader3 {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: Green;
-  color: #fff;
-}
-
-#mydiv4 {
-  position: absolute;
-  z-index: 9;
-  text-align: center;
-  border: 1px solid #d3d3d3;
-}
-
-#mydivheader4 {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: Green;
-  color: #fff;
-}
-
-#star {
-  top: 80px;
-}
-</style>
+<a style="display:none" href="hobSchedule.html" target="_blank"><button class="btn btn-danger">See my most recently made HOB list</button></a>
 
 
 
-</head>
 
 
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
